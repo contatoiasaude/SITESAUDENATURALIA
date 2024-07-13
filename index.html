@@ -8,12 +8,12 @@
     <style>
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #F4F4F9;
+            background-color: #f4f4f9;
             margin: 0;
             padding: 0;
         }
         header {
-            background-color: #1E90FF;
+            background-color: #66bb6a;
             color: white;
             padding: 20px 0;
             text-align: center;
@@ -26,21 +26,19 @@
             margin: 0 15px;
             text-decoration: none;
             color: #333;
-            cursor: pointer;
         }
         nav a:hover {
-            color: #1E90FF;
+            color: #66bb6a;
         }
         .container {
             width: 80%;
             margin: auto;
             overflow: hidden;
         }
-        .content {
-            display: none;
-        }
-        .content.active {
-            display: block;
+        #content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
         }
         .box {
             background: white;
@@ -56,7 +54,7 @@
             transform: scale(1.05);
         }
         footer {
-            background-color: #333333;
+            background-color: #333;
             color: white;
             text-align: center;
             padding: 10px 0;
@@ -64,9 +62,8 @@
             width: 100%;
             bottom: 0;
         }
-        svg {
-            width: 100px; /* Defina o tamanho desejado aqui */
-            height: auto;
+        img {
+            max-width: 100%;
             border-radius: 8px;
         }
         @media (max-width: 768px) {
@@ -85,54 +82,32 @@
         <h1>Enfermeiro Jader - Saúde Natural</h1>
     </header>
     <nav>
-        <a onclick="showSection('home')">Home</a>
-        <a onclick="showSection('buscas')">Buscas</a>
-        <a onclick="showSection('livros')">Livros</a>
+        <a href="#home">Home</a>
+        <a href="#buscas">Buscas</a>
+        <a href="#livros">Livros</a>
     </nav>
-    <div class="container">
-        <div class="content" id="home">
-            <div class="box">
-                <h2>Bem-vindo!</h2>
-                <p>Encontre informações relevantes sobre como cuidar da sua saúde utilizando práticas naturais.</p>
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="100" height="100">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93s3.05-7.44 7-7.93v7.93l6.24 3.68C16.42 19.46 14.28 20.57 12 20.93v-1.73z" fill="#4CAF50"/>
-                </svg>
-            </div>
+    <div class="container" id="content">
+        <div class="box" id="home">
+            <h2>Bem-vindo!</h2>
+            <p>Encontre informações relevantes sobre como cuidar da sua saúde utilizando práticas naturais.</p>
+            <img src="https://images.unsplash.com/photo-1614023625910-c6d29a2e3acb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fHBsYW50JTIwaGVhbHRofGVufDB8fHx8MTY4OTE4OTc3MA&ixlib=rb-1.2.1&q=80&w=400" alt="Saúde Natural">
+            <p>Foto de <a href="https://unsplash.com/pt-br/@elidefaria?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Eli DeFaria</a> na <a href="https://unsplash.com/pt-br/fotografias/fotografia-de-foco-seletivo-de-planta-de-folhas-verdes-em-garrafa-de-vidro-3KG5WU_f5Kc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a></p>
         </div>
-        <div class="content" id="buscas">
-            <div class="box">
-                <h2>Buscas</h2>
-                <p>Realize buscas em nosso agente de saúde natural.</p>
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="100" height="100">
-                    <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" fill="#1E88E5"/>
-                </svg>
-            </div>
+        <div class="box" id="buscas">
+            <h2>Buscas</h2>
+            <p>Realize buscas em nosso agente de saúde natural.</p>
+            <img src="https://images.unsplash.com/photo-1602012192028-8cd1ae5dcbb0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGhlYWx0aCUyMHByb2R1Y3R8ZW58MHx8fHwxNjg5MTkwMDk4&ixlib=rb-1.2.1&q=80&w=400" alt="Buscas">
+            <p>Foto de <a href="https://unsplash.com/pt-br/@kellysikkema?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Kelly Sikkema</a> na <a href="https://unsplash.com/pt-br/fotografias/frasco-de-frasco-de-vidro-ambar-aberto-UaO58q6ioxI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a></p>
         </div>
-        <div class="content" id="livros">
-            <div class="box">
-                <h2>Livros Recomendados</h2>
-                <p>Confira nossas sugestões de leitura para aprender mais sobre saúde natural.</p>
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="100" height="100">
-                    <path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-1 14H7v-2h10v2zm0-4H7v-2h10v2zm0-4H7V6h10v2z" fill="#FFC107"/>
-                </svg>
-            </div>
+        <div class="box" id="livros">
+            <h2>Livros Recomendados</h2>
+            <p>Confira nossas sugestões de leitura para aprender mais sobre saúde natural.</p>
+            <img src="https://images.unsplash.com/photo-1602012192028-8cd1ae5dcbb0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGhlYWx0aCUyMHByb2R1Y3R8ZW58MHx8fHwxNjg5MTkwMDk4&ixlib=rb-1.2.1&q=80&w=400" alt="Livros">
+            <p>Foto de <a href="https://unsplash.com/pt-br/@kellysikkema?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Kelly Sikkema</a> na <a href="https://unsplash.com/pt-br/fotografias/frasco-de-frasco-de-vidro-ambar-aberto-UaO58q6ioxI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a></p>
         </div>
     </div>
     <footer>
         <p>&copy; 2024 Enfermeiro Jader. Todos os direitos reservados.</p>
     </footer>
-    <script>
-        function showSection(sectionId) {
-            const sections = document.querySelectorAll('.content');
-            sections.forEach(section => {
-                section.classList.remove('active');
-            });
-            document.getElementById(sectionId).classList.add('active');
-        }
-        // Mostrar a seção Home por padrão
-        document.addEventListener('DOMContentLoaded', () => {
-            showSection('home');
-        });
-    </script>
 </body>
 </html>
