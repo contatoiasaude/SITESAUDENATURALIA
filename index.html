@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enfermeiro Jader - Saúde Natural</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             background-color: #f4f4f9;
             margin: 0;
             padding: 0;
@@ -46,6 +47,11 @@
             margin: 20px 0;
             flex-basis: 48%;
             box-sizing: border-box;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        .box:hover {
+            transform: scale(1.05);
         }
         footer {
             background-color: #333;
@@ -55,6 +61,19 @@
             position: fixed;
             width: 100%;
             bottom: 0;
+        }
+        img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        @media (max-width: 768px) {
+            .box {
+                flex-basis: 100%;
+            }
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
         }
     </style>
 </head>
@@ -71,19 +90,20 @@
         <div class="box" id="home">
             <h2>Bem-vindo!</h2>
             <p>Encontre informações relevantes sobre como cuidar da sua saúde utilizando práticas naturais.</p>
-            <img src="https://unsplash.com/pt-br/fotografias/foto-de-alto-angulo-da-pessoa-derramando-liquido-da-garrafa-dentro-de-argamassa-e-pilao-mod2s3-qFOc?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash" alt="Saúde Natural">
+            <img src="https://images.unsplash.com/photo-1614023625910-c6d29a2e3acb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fHBsYW50JTIwaGVhbHRofGVufDB8fHx8MTY4OTE4OTc3MA&ixlib=rb-1.2.1&q=80&w=400" alt="Saúde Natural">
+            <p>Foto de <a href="https://unsplash.com/pt-br/@elidefaria?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Eli DeFaria</a> na <a href="https://unsplash.com/pt-br/fotografias/fotografia-de-foco-seletivo-de-planta-de-folhas-verdes-em-garrafa-de-vidro-3KG5WU_f5Kc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a></p>
         </div>
         <div class="box" id="buscas">
             <h2>Buscas</h2>
             <p>Realize buscas em nosso agente de saúde natural.</p>
-            <img src="Foto de <a href="https://unsplash.com/pt-br/@kellysikkema?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Kelly Sikkema</a> na <a href="https://unsplash.com/pt-br/fotografias/frasco-de-frasco-de-vidro-ambar-aberto-UaO58q6ioxI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-  " alt="Buscas">
+            <img src="https://images.unsplash.com/photo-1602012192028-8cd1ae5dcbb0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGhlYWx0aCUyMHByb2R1Y3R8ZW58MHx8fHwxNjg5MTkwMDk4&ixlib=rb-1.2.1&q=80&w=400" alt="Buscas">
+            <p>Foto de <a href="https://unsplash.com/pt-br/@kellysikkema?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Kelly Sikkema</a> na <a href="https://unsplash.com/pt-br/fotografias/frasco-de-frasco-de-vidro-ambar-aberto-UaO58q6ioxI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a></p>
         </div>
         <div class="box" id="livros">
             <h2>Livros Recomendados</h2>
             <p>Confira nossas sugestões de leitura para aprender mais sobre saúde natural.</p>
-            <img src="Foto de <a href="https://unsplash.com/pt-br/@elidefaria?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Eli DeFaria</a> na <a href="https://unsplash.com/pt-br/fotografias/fotografia-de-foco-seletivo-de-planta-de-folhas-verdes-em-garrafa-de-vidro-3KG5WU_f5Kc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-  " alt="Livros">
+            <img src="https://images.unsplash.com/photo-1602012192028-8cd1ae5dcbb0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGhlYWx0aCUyMHByb2R1Y3R8ZW58MHx8fHwxNjg5MTkwMDk4&ixlib=rb-1.2.1&q=80&w=400" alt="Livros">
+            <p>Foto de <a href="https://unsplash.com/pt-br/@kellysikkema?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Kelly Sikkema</a> na <a href="https://unsplash.com/pt-br/fotografias/frasco-de-frasco-de-vidro-ambar-aberto-UaO58q6ioxI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a></p>
         </div>
     </div>
     <footer>
