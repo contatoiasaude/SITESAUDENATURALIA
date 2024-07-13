@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enfermeiro Jader - Saúde Natural</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .container {
+            padding: 20px;
+        }
+        .search-section, .books-section {
+            margin: 20px 0;
+        }
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Enfermeiro Jader</h1>
+        <p>Busque informações sobre saúde natural</p>
+    </header>
+    <nav>
+        <a href="#search">Busca</a>
+        <a href="#books">Sugestões de Livros</a>
+        <a href="#contact">Contato</a>
+    </nav>
+    <div class="container">
+        <section id="search" class="search-section">
+            <h2>Realize uma Busca</h2>
+            <p>Digite abaixo o que você está procurando sobre saúde natural:</p>
+            <input type="text" id="searchQuery" placeholder="Ex: Receitas naturais, dicas de saúde...">
+            <button onclick="performSearch()">Buscar</button>
+            <div id="searchResults"></div>
+        </section>
+        <section id="books" class="books-section">
+            <h2>Sugestões de Livros</h2>
+            <ul>
+                <li>Livro 1: Título do Livro - Autor</li>
+                <li>Livro 2: Título do Livro - Autor</li>
+                <li>Livro 3: Título do Livro - Autor</li>
+                <!-- Adicione mais sugestões de livros conforme necessário -->
+            </ul>
+        </section>
+    </div>
+    <footer>
+        <p>Contato: Enfermeiro Jader</p>
+    </footer>
+    <script>
+        function performSearch() {
+            const query = document.getElementById('searchQuery').value;
+            const resultsDiv = document.getElementById('searchResults');
+            resultsDiv.innerHTML = `<p>Resultados da busca para: ${query}</p>`;
+            // Aqui você pode adicionar a lógica para realizar a busca no banco de dados
+        }
+    </script>
+</body>
+</html>
